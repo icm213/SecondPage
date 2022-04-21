@@ -16,6 +16,25 @@ html, body {
 
 nav {
   grid-area: nav;
+  display: flex;
+  background-color: #f3f3f3;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+}
+
+.nav-el-left {
+  display: flex;
+}
+
+.nav-el-right {
+  display: flex;
+}
+
+.hamburger-box {
+  display: none;
 }
 
 head {
@@ -80,6 +99,10 @@ p, .inner-heading, .invite .invite-p, .invite .invite-p-big, .footer-box .footer
 
 .margin-bottom {
   margin: 0 0  6rem 0;
+}
+
+.margin-top {
+  padding: 5rem 0 0 0;
 }
 
 .content {
@@ -636,6 +659,9 @@ p, .inner-heading, .invite .invite-p, .invite .invite-p-big, .footer-box .footer
   .info .info-sub {
     width: 100%;
   }
+  .margin-top {
+    padding: 1rem 0 0 0;
+  }
   .image-content1 {
     flex-direction: column-reverse;
   }
@@ -652,5 +678,53 @@ p, .inner-heading, .invite .invite-p, .invite .invite-p-big, .footer-box .footer
   .footer-box {
     flex-direction: column;
     align-items: center;
+  }
+  nav {
+    position: fixed;
+    background-color: #f3f3f3;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: auto;
+  }
+  .hamburger-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    width: 50px;
+    height: 2rem;
+    z-index: 999999;
+  }
+  .hamburger-box .hamburger-belt {
+    width: 25px;
+    height: 3px;
+    margin: 3px;
+    background-color: black;
+    transition: transform 0.3s ease-in-out;
+    z-index: inherit;
+    transform-origin: 25px;
+  }
+  .nav-el-left {
+    display: none;
+  }
+  .nav-el-right {
+    display: none;
+  }
+  .display-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .close1 {
+    transform: rotate(-45deg);
+  }
+  .close2 {
+    transform: rotate(45deg);
+  }
+  .close3 {
+    opacity: 0;
   }
 }
