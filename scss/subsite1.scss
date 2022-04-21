@@ -26,6 +26,22 @@ html, body {
                 }
                 nav {
                     grid-area: nav;
+                    display: flex;
+                    background-color: $third-color;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: fixed;
+                    width: 100%;
+                    z-index: 999999;
+                }
+                .nav-el-left {
+                    display: flex;
+                }
+                .nav-el-right {
+                    display: flex;
+                }
+                .hamburger-box {
+                    display: none;
                 }
                 head {
                     grid-area: head;
@@ -91,6 +107,9 @@ p {
 }
 .margin-bottom {
     margin: 0 0  6rem 0
+}
+.margin-top {
+    padding: 5rem 0 0 0 ;
 }
 .content {
     display: flex;
@@ -571,6 +590,9 @@ align-items: center
             width: 100%;
         }
     }
+    .margin-top {
+        padding: 1rem 0 0 0 ;
+    }
     .image-content1 {
         flex-direction: column-reverse;
         .image-div {
@@ -590,5 +612,54 @@ align-items: center
     .footer-box {
         flex-direction: column;
         align-items: center;
+    }
+    nav {
+        position: fixed;
+        background-color: $third-color;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        height: auto;
+    }
+    .hamburger-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: inherit;
+        width: 50px;
+        height: 2rem;
+        z-index: 999999;
+        .hamburger-belt {
+            width: 25px;
+            height: 3px;
+            margin: 3px;
+            background-color: black;
+            transition: transform 0.3s ease-in-out;
+            z-index: inherit;
+            transform-origin: 25px;
+        }
+    }
+    .nav-el-left {
+        display: none;
+    }
+    .nav-el-right {
+        display: none;
+    }
+    .display-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .close1 {
+        transform: rotate(-45deg);
+    }    
+    .close2 {
+        transform: rotate(45deg);
+
+    }
+    .close3 {
+opacity: 0;
     }
 }
