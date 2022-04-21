@@ -7,16 +7,22 @@
     </head>
     <body>
         <nav>
-            <div class="content">
-                <h2>aaall</h2><h2>aaall</h2><h2>aaall</h2>
-                <div class="anim-box">
-                    <div class="anim-box-bg"></div>
-                    <button class="anim-box-front"><p>Read More</p></button>
-                </div>
+            <div class="hamburger-box" onclick="displayNav(), hambChangeX()">
+                <div class="hamburger-belt" id="close1"></div>
+                <div class="hamburger-belt" id="close3"></div>
+                <div class="hamburger-belt" id="close2"></div>
+            </div>
+            <div class="nav-el-left">
+                <p>Menu</p>
+                <p>First page</p>
+                <p>Second page</p>
+            </div>
+            <div class="nav-el-right">
+                <p>Contact</p>
             </div>
         </nav>
-        <header>
-            <div class="image-element">
+        <header  onclick="hideNav()">
+            <div class="image-element margin-top">
                 <div class="image-element-1">
                     <div class="content column">
                         <h3>want to have a good time and rest in the bosom of nature?</h3>
@@ -66,7 +72,7 @@
                 </div>
             </div>
         </header>
-        <main>
+        <main onclick="hideNav()">
         <section>
             <div class="content">
                 <p class="inner-heading">1. You can see beauty animals...</p>
@@ -293,7 +299,7 @@
             <section>
                 <div class=" footer-box">
                     <div class="footer-elem">
-                        <img class="forest-icon" src="pics/forest-1.jpg" alt="forest icon">
+                        <img class="forest-icon" src="../pics/forest-1.jpg" alt="forest icon">
                         <p class="adress-p-bold">Adress</p>
                         <p class="adress-p">1234 Street Name<br>
                             City, AA 99999 </p>
